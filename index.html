@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My DevOps Journey </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Arihant Logo" style="height: 50px;">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="services.html" class="active">Services</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="active">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="search-login">
+        <input type="text" id="searchBar" placeholder="Search Projects..." onkeyup="searchProjects()">
+            <button onclick="showLogin()">Login</button>
+        </div>
+    </header>
+    <main>
+        <section>
+    
     <h1>Hey, I'm Arihant Jain</h1>
     <p>I'm learning DevOps in Delhi to kickstart my tech career</p>
     <p>My goal: Land a DevOps job, buy a house, and build a bright future!</p>
-    <section> 
+    </section>
+    <section id="projects"> 
     <h2>My DevOps Projects</h2>
     <ul>
         <li>Deployed a static website on AWS S3 (In Progress)</li>
@@ -19,12 +47,23 @@
         <li>Exploring AWS CloudFormation for IaC</li>
     </ul>
     </section>
-    <section>
-    <h2>Contact Me</h2>
-    <a href="http://www.linkedin.com/in/arihant-jain-287582157/" target="_blank">
-        <button>Connect on LinkedIn</button>
-    </a>
-    </section>
+    </main>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+
+        </div>
+
+    </div>
+    
 
 </body>
 </html>
